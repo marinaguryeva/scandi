@@ -1,6 +1,7 @@
 
 body {
     margin: 0;
+    padding: 0;
     font-family: "Montserrat", "Arial", sans-serif;
     color: #533738;
     background-color: #F5F2ED;
@@ -21,6 +22,8 @@ a {
     position: relative;
     width: 100%;
     height: 715px;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 .header {
@@ -46,9 +49,7 @@ a {
 
 .intro {
     padding: 0;
-    margin-top: 91px;
-    margin-left: 185px;
-    margin-bottom: 160px;
+    margin: 91px auto 185px 160px;
 }
 
 h1 {
@@ -81,6 +82,23 @@ h1 {
     font-weight: 500;
     font-family: Montserrat;
     color: #533738;
+}
+
+.btn:hover {
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+    text-shadow: 1px 1px 2px #FFFFFF;
+}
+
+.btn:focus {
+    outline: none;    
+    box-shadow: 4px 4px 4px rgba(255, 255, 255, 0.2);
+    text-shadow: 1px 1px 0 #FFFFFF;
+    transition: all 250ms linear;
+
 }
 
 .subheading {
@@ -208,9 +226,11 @@ h1 {
 }
 
 .team_and_work {
+    display: ;
     background-color: #E2C4BA;
-    height: 1080px;
+    background-size: 100% auto;
     width: 100%;
+    max-width: 100%;
     align-items: center;
 }
 
@@ -243,8 +263,10 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    margin: auto 0;
+    flex-wrap: nowrap;
+    margin-bottom: 80px;
+    height: 300px;
+    max-height: 300px;
 }
 
 .circle {
@@ -284,11 +306,16 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 658px;
+    max-height: 100%;
+    margin-top: 65px;
+
 }
 
 .reviews_text {
+    height: 400px;
     max-width: 407px;
-    max-height: auto;
+    max-height: 100%;
     font-size: 18px;
     line-height: 30px;
     margin: 0 20px 0 30px;
@@ -330,7 +357,6 @@ h1 {
     height: 624px;
     margin-left: auto;
     margin-right: auto;
-
 }
 
 .request_subheading {
@@ -371,11 +397,14 @@ input::placeholder {
 }
 
 .footer {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    display: flex;
+    justify-content: space-around;
     text-align: center;
+    align-items: center;
+    height: 104px;
 }
 
 .address {
     margin-right: 380px;
 }
+
